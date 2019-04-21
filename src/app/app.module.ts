@@ -8,7 +8,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { environment } from 'src/environments/environment.prod';
-import { MaterialModule } from './modules/material/material.module';
+import { CustomMaterialModule } from './modules/material/material.module';
 import { AppRoutingModule } from './modules/app.routing/app.routing.module';
 
 @NgModule({
@@ -20,7 +20,7 @@ import { AppRoutingModule } from './modules/app.routing/app.routing.module';
     BrowserAnimationsModule,  
     AngularFireModule.initializeApp(  environment.firebase),
     AngularFirestoreModule,
-    MaterialModule,
+    CustomMaterialModule,
     AppRoutingModule
   ],
   providers: [],

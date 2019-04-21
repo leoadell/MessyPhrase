@@ -1,9 +1,35 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <form class="input-form">
+      <mat-form-field class="input-full-width">
+        <input matInput placeholder="Enter a descriptive key">
+      </mat-form-field>
+
+      <mat-form-field class="input-full-width">
+        <textarea matInput placeholder="Enter the phrase to shuffle"></textarea>
+      </mat-form-field>
+
+    </form>
+
+    <div class="example-button-row">
+      <button mat-fab color="primary" [type]="submit" (click)="confirmAdd()">Save</button>
+
+      <button mat-fab color="accent" (click)="onNoClick()">Shuffle</button>
+    </div>
+
+
+
+
+
+  </mat-card-header>
+</mat-card>
+
 <div>
   <h1>{{title}}</h1>
 </div>
 <div>
   <div>
-<input type=text >
+    <input type=text>
   </div>
   <ul>
     <li *ngFor="let item of items | async">
