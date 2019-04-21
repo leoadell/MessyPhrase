@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {Observable} from 'rxjs';
+import { AngularFirestore } from 'angularfire2/firestore';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  public items :Observable<any[]>;
   title = 'MessyPhrase';
+
+  constructor(db:AngularFirestore){
+    this.items= db.collection('/items').valueChanges();
+  }
 }
