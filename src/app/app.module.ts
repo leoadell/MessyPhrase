@@ -5,6 +5,12 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireModule } from 'angularfire2';
 
 
+
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatButtonModule, MatCheckboxModule} from '@angular/material';
+
+
+
 import { AppComponent } from './app.component';
 import { environment } from 'src/environments/environment.prod';
 
@@ -14,6 +20,9 @@ import { environment } from 'src/environments/environment.prod';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    MatButtonModule, 
+    MatCheckboxModule,
     AngularFireModule.initializeApp(  environment.firebase),
     AngularFirestoreModule
   ],
