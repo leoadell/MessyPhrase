@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { environment } from 'src/environments/environment.prod';
 import { CustomMaterialModule } from './modules/material/material.module';
 import { AppRoutingModule } from './modules/app.routing/app.routing.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { AppRoutingModule } from './modules/app.routing/app.routing.module';
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule,  
+    BrowserAnimationsModule,
+    FormsModule,  
     AngularFireModule.initializeApp(  environment.firebase),
     AngularFirestoreModule,
     CustomMaterialModule,
